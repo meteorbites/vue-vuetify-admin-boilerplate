@@ -82,7 +82,7 @@ export default {
       this.$emit("side-icon-click");
     },
     logout() {
-      window.getApp.$emit("APP_LOGOUT");
+      window.getApp.$emit("app-logout");
       console.log("log out!");
     },
     handleFullScreen() {

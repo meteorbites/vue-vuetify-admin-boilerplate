@@ -1,6 +1,6 @@
 export default [
     {
-        name: 'APP_LOGIN_SUCCESS',
+        name: 'app-login-success',
         callback: function (e) {
             console.log(e);
             this.snackbar = {
@@ -12,7 +12,7 @@ export default [
         }
     },
     {
-        name: 'APP_LOGOUT',
+        name: 'app-logout',
         callback: function (e) {
             console.log(e);
             this.snackbar = {

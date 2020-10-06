@@ -64,7 +64,7 @@ export default {
 
       if (this.$refs.form.validate() && username && password) {
         // your login service call here...
-        window.getApp.$emit("APP_LOGIN_SUCCESS");
+        window.getApp.$emit("app-login-success");
       }
     },
   },
