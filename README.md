@@ -5,7 +5,7 @@ Includes a Login Page using Vuetify centered layout.
 
 Who is it for? It's for those who wish to have a baseline app, admin template app or starting point for implementing Vue, Vue-Router, Vuetify projects that incorporates application drawer, toolbar, footer and content area. (e.g. common usage and examples are Admin Apps). Perfect for Vue and Vuetify-beginners that wish to have a playground to apply code snippets captured from [Vuetify's Documentation](https://vuetifyjs.com/en/introduction/why-vuetify/#guide).
 
-One of the goals for this boilerplate is to ensure that there's no outdated packages and to ensure to install the shiny new versions.
+One of the goals for this boilerplate is to ensure that there's no outdated packages and to ensure to install the shiny new versions. Minor and Patch updates at a minimum. Major updates that are backwards-incompatible needs to be evaluated.
 
 #
 
