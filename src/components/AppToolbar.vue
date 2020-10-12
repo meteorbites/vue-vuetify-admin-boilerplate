@@ -2,15 +2,14 @@
   <v-app-bar app>
     <v-app-bar-nav-icon @click="handleDrawerToggle" />
     <v-toolbar-title>{{
-      $vuetify.lang.t("$vuetify.app_drawer." + this.$route.meta.title)
+      $t("app_drawer." + this.$route.meta.title)
     }}</v-toolbar-title>
     <v-spacer />
     <v-toolbar-items>
       <v-btn icon @click="this.handleFullScreen">
         <v-icon>mdi-fullscreen</v-icon>
       </v-btn>
-      <v-btn icon>
-        <!-- @click="openThemeSettings()" -->
+      <v-btn icon @click="handleShowSettings">
         <v-icon>mdi-cog-outline</v-icon>
       </v-btn>
       <v-btn icon>
@@ -31,18 +30,18 @@
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>{{
-                $vuetify.lang.t("$vuetify.app_toolbar.logout")
+                $t('app_toolbar.logout')
               }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
       </v-menu>
     </v-toolbar-items>
-    <v-toolbar tag="div" dense slot="extension" color="white" light>
+    <v-toolbar tag="div" dense slot="extension">
       <v-icon>mdi-home</v-icon>
       <v-breadcrumbs :items="breadcrumbs" class="pa-3" />
       <v-spacer></v-spacer>
-      <v-btn icon small color="black">
+      <v-btn icon small>
         <v-icon v-text="'mdi-arrow-left'" />
       </v-btn>
     </v-toolbar>
@@ -55,7 +54,7 @@ import Util from "@/util";
 export default {
   name: "AppToolbar",
   data: () => ({
-    // drawer: null,
+    
   }),
   computed: {
     breadcrumbs() {
@@ -65,9 +64,7 @@ export default {
           index === matched.length - 1
             ? this.$route.path
             : route.path || route.redirect;
-        const text = this.$vuetify.lang.t(
-          "$vuetify.app_drawer." + route.meta.title
-        );
+        const text = this.$t('app_drawer.' + route.meta.title);
         return {
           text: text,
           to: to,
@@ -80,6 +77,9 @@ export default {
   methods: {
     handleDrawerToggle() {
       this.$emit("side-icon-click");
+    },
+    handleShowSettings() {
+      this.$emit("settings-icon-click");
     },
     logout() {
       window.getApp.$emit("app-logout");

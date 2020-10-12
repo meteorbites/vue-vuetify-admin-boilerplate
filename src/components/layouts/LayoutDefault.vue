@@ -1,7 +1,7 @@
 <template>
   <v-app class="app">
     <app-drawer class="app--drawer" ref="drawer" />
-    <app-toolbar class="app--toolbar" @side-icon-click="handleDrawerVisible" />
+    <app-toolbar class="app--toolbar" @side-icon-click="handleDrawerVisible" @settings-icon-click="showSettings" />
 
     <!-- Sizes your content based upon application components -->
     <v-main>
@@ -12,8 +12,8 @@
       </v-container>
     </v-main>
 
-    <!-- Theme Settings Drawer -->
-    <!-- <v-navigation-drawer v-model="right" fixed right temporary /> -->
+    <!-- App Settings Drawer -->
+    <app-settings class="app--settings" ref="settings" />
 
     <!-- App Footer -->
     <app-footer class="app--footer" />
@@ -24,13 +24,15 @@
 import AppToolbar from '@/components/AppToolbar'
 import AppDrawer from '@/components/AppDrawer'
 import AppFooter from '@/components/AppFooter'
+import AppSettings from '@/components/AppSettings'
 
 export default {
   name: 'LayoutDefault',
   components: {
     AppToolbar,
     AppDrawer,
-    AppFooter
+    AppFooter,
+    AppSettings
   },
 
   data: () => ({
@@ -40,6 +42,9 @@ export default {
   methods: {
     handleDrawerVisible() {
       this.$refs.drawer.toggleDrawer()
+    },
+    showSettings() {
+      this.$refs.settings.showSettings()
     }
   }
 };

@@ -1,0 +1,22 @@
+{
+  "language": "English",
+  "app_drawer": {
+    "title": "Application",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "about": "About"
+  },
+  "app_toolbar": {
+    "logout": "Logout"
+  },
+  "app_settings": {
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "app_footer": {
+    "title": "Footer"
+  }
+}

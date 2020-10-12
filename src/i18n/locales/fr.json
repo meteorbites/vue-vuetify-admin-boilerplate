@@ -1,0 +1,22 @@
+{
+    "language": "French",
+    "app_drawer": {
+        "title": "Application",
+        "home": "Accueil",
+        "dashboard": "Tableau de bord",
+        "about": "A propos"
+    },
+    "app_toolbar": {
+        "logout": "Déconnexion"
+    },
+    "app_settings": {
+        "settings": "Réglages",
+        "language": "Langue",
+        "theme": "Thème",
+        "light": "Lumière",
+        "dark": "Sombre"
+    },
+    "app_footer": {
+        "title": "Bas de page"
+    }
+}

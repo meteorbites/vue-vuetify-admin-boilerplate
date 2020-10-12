@@ -1,6 +1,6 @@
 <template>
   <v-footer app inset>
-    <span>{{ $vuetify.lang.t("$vuetify.app_footer.title") }}</span>
+    <span>{{ $t('app_footer.title') }}</span>
     <v-spacer />
     <span>&copy; {{ new Date().getFullYear() }}</span>
   </v-footer>

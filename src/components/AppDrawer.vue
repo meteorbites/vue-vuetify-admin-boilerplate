@@ -7,9 +7,7 @@
   >
     <v-toolbar>
       <v-toolbar-title>
-        <span class="hidden-sm-and-down">{{
-          $vuetify.lang.t("$vuetify.app_drawer.title")
-        }}</span>
+        <span class="hidden-sm-and-down">{{ $t("app_drawer.title") }}</span>
       </v-toolbar-title>
     </v-toolbar>
     <v-list class="pa-0">
@@ -22,18 +20,14 @@
                   <v-icon v-bind="attrs" v-on="on" v-text="item.meta.icon" />
                 </template>
                 <span>
-                  {{
-                    $vuetify.lang.t("$vuetify.app_drawer." + item.meta.title)
-                  }}
+                  {{ $t("$vuetify.app_drawer." + item.meta.title) }}
                 </span>
               </v-tooltip>
             </template>
             <template v-slot:activator>
               <v-list-item-content>
                 <v-list-item-title
-                  v-text="
-                    $vuetify.lang.t('$vuetify.app_drawer.' + item.meta.title)
-                  "
+                  v-text="$t('$vuetify.app_drawer.' + item.meta.title)"
                 />
               </v-list-item-content>
             </template>
@@ -55,9 +49,7 @@
                       />
                     </template>
                     <span>{{
-                      $vuetify.lang.t(
-                        "$vuetify.app_drawer." + subItem.meta.title
-                      )
+                      $t("$vuetify.app_drawer." + subItem.meta.title)
                     }}</span>
                   </v-tooltip>
                 </v-list-item-icon>
@@ -65,11 +57,7 @@
               <template v-else>
                 <v-list-item-content>
                   <v-list-item-title
-                    v-text="
-                      $vuetify.lang.t(
-                        '$vuetify.app_drawer.' + subItem.meta.title
-                      )
-                    "
+                    v-text="$t('app_drawer.' + subItem.meta.title)"
                   />
                 </v-list-item-content>
               </template>
@@ -87,17 +75,11 @@
                 <template v-slot:activator="{ on, attrs }">
                   <v-icon v-bind="attrs" v-on="on" v-text="item.meta.icon" />
                 </template>
-                <span>{{
-                  $vuetify.lang.t("$vuetify.app_drawer." + item.meta.title)
-                }}</span>
+                <span>{{ $t("app_drawer." + item.meta.title) }}</span>
               </v-tooltip>
             </v-list-item-icon>
             <v-list-item-content v-if="drawerWidth !== 64">
-              <v-list-item-title
-                v-text="
-                  $vuetify.lang.t('$vuetify.app_drawer.' + item.meta.title)
-                "
-              />
+              <v-list-item-title v-text="$t('app_drawer.' + item.meta.title)" />
             </v-list-item-content>
             <v-list-item-action v-if="item.meta.new">
               <v-icon color="green">mdi-new-box </v-icon>
@@ -107,7 +89,7 @@
       </template>
     </v-list>
     <template v-slot:append>
-      <div class="grey lighten-3">
+      <div>
         <template v-if="drawerWidth === 64">
           <div class="d-flex">
             <v-btn
@@ -175,10 +157,10 @@ export default {
 
 <style lang="sass" scoped>
 .app--drawer
-    overflow: hidden !important
+  overflow: hidden !important
 
 .drawer-menu--scroll
-    height: calc(100vh - 48px)
-    overflow: auto
+  height: calc(100vh - 48px)
+  overflow: auto
 </style>
 
